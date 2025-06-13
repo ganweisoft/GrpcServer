@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	  <Version>9.0.0.1</Version>
+	  <IsPackable>true</IsPackable>
+	  <EnableNETAnalyzers>False</EnableNETAnalyzers>
+	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Database\**" />
+    <Compile Remove="Domain\DO\GWAssembly\**" />
+    <EmbeddedResource Remove="Database\**" />
+    <EmbeddedResource Remove="Domain\DO\GWAssembly\**" />
+    <None Remove="Database\**" />
+    <None Remove="Domain\DO\GWAssembly\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Domain\DO\DbConnection.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\IoTCenterHost.Infrastructure\IoTCenterHost.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

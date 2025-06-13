@@ -1,0 +1,12 @@
+using GWDataCenter;
+using IoTCenterHost.Core.Abstraction.AppServices;
+using System.Collections.Generic;
+
+namespace IoTCenterHost.Core.ServerInterfaces
+{
+    public interface IYCServerAppService : IYCAppService
+    {
+        List<YCItem> GetTotalYCDataEx(bool isDynamic);
+
+    }
+}

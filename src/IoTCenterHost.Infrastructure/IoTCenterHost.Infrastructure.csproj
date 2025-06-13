@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>9.0.0.1</Version>
+		<IsPackable>true</IsPackable>
+		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
+		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
+		<EnableNETAnalyzers>False</EnableNETAnalyzers>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="OpenGWDataCenter" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+		<PackageReference Include="System.Drawing.Common" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
+		<ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
+	</ItemGroup>
+
+</Project>
