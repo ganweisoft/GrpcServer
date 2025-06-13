@@ -11,19 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Database\**" />
-    <Compile Remove="Domain\DO\GWAssembly\**" />
-    <EmbeddedResource Remove="Database\**" />
-    <EmbeddedResource Remove="Domain\DO\GWAssembly\**" />
-    <None Remove="Database\**" />
-    <None Remove="Domain\DO\GWAssembly\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Domain\DO\DbConnection.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\IoTCenterHost.Infrastructure\IoTCenterHost.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

@@ -37,26 +37,6 @@
 	<PackageReference Include="SQLitePCLRaw.bundle_e_sqlite3" />
   </ItemGroup>
   
-
-  <ItemGroup>
-    <Compile Remove="Infrastructure\DB\**" />
-    <Compile Remove="logs\**" />
-    <Compile Remove="packages\**" />
-    <Content Remove="Infrastructure\DB\**" />
-    <Content Remove="packages\**" />
-    <EmbeddedResource Remove="Infrastructure\DB\**" />
-    <EmbeddedResource Remove="logs\**" />
-    <EmbeddedResource Remove="packages\**" />
-    <None Remove="Infrastructure\DB\**" />
-    <None Remove="logs\**" />
-    <None Remove="packages\**" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <Compile Remove="Application\GWExProcAppServiceImpl.cs" />
-    <Compile Remove="GrpcConstract\AlarmCenterExService.cs" />
-  </ItemGroup>
-  
   <ItemGroup>
     <ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
     <ProjectReference Include="..\IoTCenterHost.Core.Extension\IoTCenterHost.Core.Extension.csproj" />

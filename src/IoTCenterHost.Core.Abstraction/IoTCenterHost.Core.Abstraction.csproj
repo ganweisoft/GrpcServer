@@ -1,21 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
-		<TargetFramework>$(AspNetCoreTargetFramework)</TargetFramework>
-		<Version>9.0.0.2</Version>
+		<VersionPrefix>9.0.0.3</VersionPrefix>
+		<Version>$(VersionPrefix)</Version>
+		<AssemblyVersion>$(VersionPrefix)</AssemblyVersion>
+		<FileVersion>$(VersionPrefix)</FileVersion>
+	</PropertyGroup>
+	<PropertyGroup>
 		<PackageId>IoTCenterHost.Core.Abstraction</PackageId>
 		<Description>grpc abstraction interface</Description>
 		<SignAssembly>true</SignAssembly>
-		<AssemblyVersion>9.0.0.2</AssemblyVersion>
 		<PackageId>IoTCenterHost.Core.Abstraction</PackageId>
 		<Authors>ganweisoft</Authors>
 		<Company>ganweisoft</Company>
-		<FileVersion>9.0.0.2</FileVersion>
 		<IsPackable>true</IsPackable>
 		<RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
 		<RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 		<EnableNETAnalyzers>False</EnableNETAnalyzers>
-		<TargetFramework>net6.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<NoWarn>$(NoWarn);CS1591;CS0108</NoWarn>
 		<PackageProjectUrl>https://opensource.ganweicloud.com</PackageProjectUrl>
 		<PackageIcon>logo.jpg</PackageIcon>
@@ -28,10 +29,6 @@
 		<AllowUnsafeBlocks>false</AllowUnsafeBlocks>
 		<DocumentationFile>IoTCenterHost.Core.Abstraction.xml</DocumentationFile>
 	</PropertyGroup>
-
-	<ItemGroup>
-		<Compile Remove="Interfaces\AppServices\IGWExProcAppService.cs" />
-	</ItemGroup>
 
 	<ItemGroup>
 		<None Include="..\..\LICENSE">
