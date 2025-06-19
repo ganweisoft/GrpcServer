@@ -13,39 +13,37 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 # Source Code Structure
 ```bash
 |-- GWHost
-|   `-- Properties
+|   |-- Properties
 |-- IoTCenterHost.AppServices
 |   |-- Application
 |   |-- Interfaces
 |   |-- Properties
-|   `-- Resources
+|   |-- Resources
 |-- IoTCenterHost.Build
 |-- IoTCenterHost.Core
 |   |-- Cache
 |   |-- IotModels
 |   |-- ModelAdapter
 |   |-- ProxyModels
-|   `-- ServerInterfaces
+|   |-- ServerInterfaces
 |-- IoTCenterHost.Core.Abstraction
 |   |-- BaseModels
 |   |-- EnumDefine
-|   `-- Interfaces
+|   |-- Interfaces
 |-- IoTCenterHost.Core.Extension
 |-- IoTCenterHost.Domain
-|   `-- Domain
+|   |-- Domain
 |-- IoTCenterHost.GrpcConstract
 |   |-- GrpcConstract
-|   `-- StartUp
+|   |-- StartUp
 |-- IoTCenterHost.Infrastructure
 |   |-- IotCenter
-|   `-- Token
+|   |-- Token
 |-- IoTCenterHost.Protos
 `-- config
     |-- data
     |-- database
-    `-- dll
-
-
+    |-- dll
 ```
 
 ### Source Code Build Instructions  
