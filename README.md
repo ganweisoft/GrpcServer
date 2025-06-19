@@ -40,7 +40,7 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 |   |-- IotCenter
 |   |-- Token
 |-- IoTCenterHost.Protos
-`-- config
+|-- config
     |-- data
     |-- database
     |-- dll
