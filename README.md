@@ -12,38 +12,37 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 
 # Source Code Structure
 ```bash
-|-- GWHost
-|   |-- Properties
-|-- IoTCenterHost.AppServices
-|   |-- Application
-|   |-- Interfaces
-|   |-- Properties
-|   |-- Resources
-|-- IoTCenterHost.Build
-|-- IoTCenterHost.Core
-|   |-- Cache
-|   |-- IotModels
-|   |-- ModelAdapter
-|   |-- ProxyModels
-|   |-- ServerInterfaces
-|-- IoTCenterHost.Core.Abstraction
-|   |-- BaseModels
-|   |-- EnumDefine
-|   |-- Interfaces
-|-- IoTCenterHost.Core.Extension
-|-- IoTCenterHost.Domain
-|   |-- Domain
-|-- IoTCenterHost.GrpcConstract
-|   |-- GrpcConstract
-|   |-- StartUp
-|-- IoTCenterHost.Infrastructure
-|   |-- IotCenter
-|   |-- Token
-|-- IoTCenterHost.Protos
-|-- config
-    |-- data
-    |-- database
-    |-- dll
+|-- GWHost                 # Gateway Host Root Directory
+|   |-- Properties          # Gateway Host Properties Configuration
+|-- IoTCenterHost.AppServices  # Application Service Layer
+|   |-- Application         # Application Service Layer Implementation
+|   |-- Interfaces          # Service Interface Definitions
+|   |-- Properties          # Application Service Configuration
+|   |-- Resources           # Resource Files (Localization/Icons/Templates)
+|-- IoTCenterHost.Build     # Build System Configuration
+|-- IoTCenterHost.Core      # Core Functionality Module
+|   |-- Cache               # Core Caching Mechanism
+|   |-- IotModels           # IoT Domain Models
+|   |-- ModelAdapter        # Model Adaptation Layer
+|   |-- ProxyModels         # Proxy Model Layer
+|   |-- ServerInterfaces    # Server-Side Interface Definitions
+|-- IoTCenterHost.Core.Abstraction  # Core Abstraction Layer
+|   |-- BaseModels          # Base Model Abstractions
+|   |-- EnumDefine          # Global Enumeration Definitions
+|   |-- Interfaces          # Core Abstract Interfaces
+|-- IoTCenterHost.Core.Extension  # Extension Functionality Implementation
+|-- IoTCenterHost.Domain    # Domain Layer (DDD Pattern)
+|-- IoTCenterHost.GrpcConstract  # gRPC Service Directory
+|   |-- GrpcConstract       # gRPC Service Contract Definitions
+|   |-- StartUp             # gRPC Service Startup Configuration
+|-- IoTCenterHost.Infrastructure  # Infrastructure Layer
+|   |-- IotCenter           # Infrastructure Core Implementation
+|   |-- Token               # Token Service Implementation (JWT/OAuth)
+|-- IoTCenterHost.Protos    # Protocol Definition Files
+|-- config                  # Configuration Directory
+    |-- data               # Runtime Configuration Files
+    |-- database           # Database Connection Configuration
+    |-- dll                # Dependency Library Files
 ```
 
 ### Source Code Build Instructions  
