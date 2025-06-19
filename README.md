@@ -12,7 +12,6 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 
 # Source Code Structure
 ```bash
-.
 |-- Directory.Build.props        # MSBuild global properties (versioning, constants)
 |-- Directory.Build.targets      # MSBuild global targets (build pipeline customization)
 |-- Directory.Packages.props     # NuGet package version management
