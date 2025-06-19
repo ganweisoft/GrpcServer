@@ -10,6 +10,70 @@ English | [简体中文](README-CN.md)
 
 GrpcServer builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation.
 
+# Source Code Structure
+```bash
+|-- Directory.Build.props
+|-- Directory.Build.targets
+|-- Directory.Packages.props
+|-- GWHost
+|   |-- GWRES1.dll
+|   `-- Properties
+|-- IoTCenterHost.AppServices
+|   |-- Application
+|   |   `-- Readme.md
+|   |-- Interfaces
+|   |-- Properties
+|   `-- Resources
+|       |-- LocalizationResource.en-US.resx
+|       |-- LocalizationResource.resx
+|       `-- LocalizationResource.zh-CN.resx
+|-- IoTCenterHost.Build
+|   |-- Dependencies.AspNetCore.props
+|   |-- Dependencies.props
+|   |-- IoTCenterCore.Commons.props
+|   `-- IoTCenterCore.Commons.targets
+|-- IoTCenterHost.Core
+|   |-- Cache
+|   |-- IotModels
+|   |-- ModelAdapter
+|   |-- ProxyModels
+|   `-- ServerInterfaces
+|-- IoTCenterHost.Core.Abstraction
+|   |-- BaseModels
+|   |-- EnumDefine
+|   |-- Interfaces
+|   |   |-- AppServices
+|   |   `-- Services
+|   `-- IoTCenterHost.Core.Abstraction.xml
+|-- IoTCenterHost.Core.Extension
+|-- IoTCenterHost.Domain
+|   `-- Domain
+|       |-- DO
+|       |-- DomainBase
+|       |-- PO
+|       `-- VO
+|-- IoTCenterHost.GrpcConstract
+|   |-- GrpcConstract
+|   |   `-- IotHostService
+|   `-- StartUp
+|       `-- Interceptors
+|-- IoTCenterHost.Infrastructure
+|   |-- IotCenter
+|   |   `-- Interface
+|   `-- Token
+|-- IoTCenterHost.Protos
+|-- compile.bat
+|-- config
+|   |-- data
+|   |   `-- AlarmCenter
+|   |-- database
+|   |   |-- Database.db
+|   |   `-- IoTCenter_MySQL.sql
+|   `-- dll
+|       `-- BCDataSimu.STD.dll
+`-- logo.jpg
+```bash
+
 ### Source Code Build Instructions  
 For information on how to build GrpcServer from source, please refer to the [Wiki](https://github.com/ganweisoft/GrpcServer/wiki).
 
