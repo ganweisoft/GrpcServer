@@ -12,66 +12,39 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 
 # Source Code Structure
 ```bash
-|-- Directory.Build.props        # MSBuild global properties (versioning, constants)
-|-- Directory.Build.targets      # MSBuild global targets (build pipeline customization)
-|-- Directory.Packages.props     # NuGet package version management
-|-- GWHost                       # Host application executable
-|   |-- GWRES1.dll               # Main application DLL
-|   `-- Properties               # Assembly info/configuration
-|-- IoTCenterHost.AppServices    # Application services layer
-|   |-- Application              # Business logic implementation
-|   |   `-- Readme.md            # Layer documentation
-|   |-- Interfaces               # Service contracts/interfaces
-|   |-- Properties               # Layer-specific settings
-|   `-- Resources                # Localization resources
-|       |-- LocalizationResource.en-US.resx  # English translations
-|       |-- LocalizationResource.resx        # Neutral language fallback
-|       `-- LocalizationResource.zh-CN.resx  # Chinese translations
-|-- IoTCenterHost.Build          # Build configuration
-|   |-- Dependencies.AspNetCore.props      # ASP.NET Core dependencies
-|   |-- Dependencies.props                 # Shared dependency versions
-|   |-- IoTCenterCore.Commons.props        # Core library build settings
-|   `-- IoTCenterCore.Commons.targets      # Core library build tasks
-|-- IoTCenterHost.Core           # Core business logic
-|   |-- Cache                    # Caching mechanisms
-|   |-- IotModels                # IoT-specific data models
-|   |-- ModelAdapter             # Data model adapters/converters
-|   |-- ProxyModels              # External service proxy models
-|   `-- ServerInterfaces         # Server-side API contracts
-|-- IoTCenterHost.Core.Abstraction  # Abstract core components
-|   |-- BaseModels               # Base class definitions
-|   |-- EnumDefine               # Shared enumerations
-|   |-- Interfaces               # Core service interfaces
-|   |   |-- AppServices          # Application service contracts
-|   |   `-- Services             # Domain service contracts
-|   `-- IoTCenterHost.Core.Abstraction.xml  # XML documentation for IntelliSense
-|-- IoTCenterHost.Core.Extension    # Extensibility points/plugins
-|-- IoTCenterHost.Domain           # Domain-driven design components
-|   `-- Domain                   # Domain logic layer
-|       |-- DO                    # Domain Objects (business entities)
-|       |-- DomainBase            # Base domain classes
-|       |-- PO                    # Persistence Objects (database entities)
-|       `-- VO                    # Value Objects (immutable values)
-|-- IoTCenterHost.GrpcConstract    # gRPC service definitions
-|   |-- GrpcConstract             # Contracts (likely should be "Contract")
-|   |   `-- IotHostService        # gRPC service interface
-|   `-- StartUp                   # gRPC server configuration
-|       `-- Interceptors          # gRPC middleware/interceptors
-|-- IoTCenterHost.Infrastructure  # Infrastructure implementations
-|   |-- IotCenter                 # IoT-specific infrastructure
-|   |   `-- Interface             # IoT device interfaces
-|   `-- Token                     # Authentication/token services
-|-- IoTCenterHost.Protos           # Protocol Buffer definitions (gRPC)
-|-- compile.bat                   # Windows build script
-|-- config                        # Configuration files
-|   |-- data                      # Runtime data files
-|   |   `-- AlarmCenter           # Alarm system configuration
-|   |-- database                  # Database artifacts
-|   |   |-- Database.db           # SQLite database file
-|   |   `-- IoTCenter_MySQL.sql   # MySQL schema/data script
-|   `-- dll                       # Third-party dependencies
-|       `-- BCDataSimu.STD.dll    # Data simulation library
-`-- logo.jpg                      # Application icon/logo
+|-- GWHost
+|   `-- Properties
+|-- IoTCenterHost.AppServices
+|   |-- Application
+|   |-- Interfaces
+|   |-- Properties
+|   `-- Resources
+|-- IoTCenterHost.Build
+|-- IoTCenterHost.Core
+|   |-- Cache
+|   |-- IotModels
+|   |-- ModelAdapter
+|   |-- ProxyModels
+|   `-- ServerInterfaces
+|-- IoTCenterHost.Core.Abstraction
+|   |-- BaseModels
+|   |-- EnumDefine
+|   `-- Interfaces
+|-- IoTCenterHost.Core.Extension
+|-- IoTCenterHost.Domain
+|   `-- Domain
+|-- IoTCenterHost.GrpcConstract
+|   |-- GrpcConstract
+|   `-- StartUp
+|-- IoTCenterHost.Infrastructure
+|   |-- IotCenter
+|   `-- Token
+|-- IoTCenterHost.Protos
+`-- config
+    |-- data
+    |-- database
+    `-- dll
+
 
 ```
 
