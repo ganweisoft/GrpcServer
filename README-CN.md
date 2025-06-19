@@ -15,37 +15,37 @@ GrpcServer采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、
 以下是为目录结构添加的英文注释，基于常见开发实践和文件名推测功能：
 
 ```bash
-|-- GWHost
-|   |-- Properties          # 网关主机配置文件（如程序集信息、配置参数）
-|-- IoTCenterHost.AppServices
-|   |-- Application         # 应用服务层（业务逻辑实现）
-|   |-- Interfaces          # 服务接口定义（包含IService等接口）
-|   |-- Properties          # 应用服务层配置文件
+|-- GWHost                 # 网关主机主目录
+|   |-- Properties          # 网关主机属性配置
+|-- IoTCenterHost.AppServices  # 应用服务层
+|   |-- Application         # 应用服务层实现
+|   |-- Interfaces          # 服务接口定义
+|   |-- Properties          # 应用服务配置
 |   |-- Resources           # 资源文件
-|-- IoTCenterHost.Build     # 构建相关配置
-|-- IoTCenterHost.Core
+|-- IoTCenterHost.Build     # 构建系统目录
+|-- IoTCenterHost.Core      # 核心功能模块
 |   |-- Cache               # 核心缓存模块
-|   |-- IotModels           # IoT核心领域模型
-|   |-- ModelAdapter        # 模型适配器
+|   |-- IotModels           # IoT领域模型
+|   |-- ModelAdapter        # 模型适配层
 |   |-- ProxyModels         # 代理模型层
-|   |-- ServerInterfaces    # 服务器端接口定义
-|-- IoTCenterHost.Core.Abstraction
+|   |-- ServerInterfaces    # 服务端接口定义
+|-- IoTCenterHost.Core.Abstraction  # 核心抽象层
 |   |-- BaseModels          # 基础模型抽象
-|   |-- EnumDefine          # 全局枚举定义
+|   |-- EnumDefine          # 枚举定义
 |   |-- Interfaces          # 核心抽象接口
-|-- IoTCenterHost.Core.Extension  # 扩展功能实现
-|-- IoTCenterHost.Domain    # 领域驱动设计核心
-|-- IoTCenterHost.GrpcConstract
-|   |-- GrpcConstract       # gRPC服务契约定义（
-|   |-- StartUp             # gRPC服务启动配置（服务注册、中间件）
-|-- IoTCenterHost.Infrastructure
-|   |-- IotCenter           # 基础设施层核心实现
-|   |-- Token               # 认证令牌服务实现（JWT/OAuth相关）
-|-- IoTCenterHost.Protos    # Protocol Buffers协议定义文件
-|-- config
-    |-- data               # 运行时数据配置
-    |-- database           # 数据库
-    |-- dll                # 第三方依赖库
+|-- IoTCenterHost.Core.Extension  # 扩展功能层
+|-- IoTCenterHost.Domain    # 领域层
+|-- IoTCenterHost.GrpcConstract  # gRPC服务目录
+|   |-- GrpcConstract       # gRPC服务契约
+|   |-- StartUp             # gRPC服务启动配置
+|-- IoTCenterHost.Infrastructure  # 基础设施层
+|   |-- IotCenter           # 基础设施实现
+|   |-- Token               # 令牌服务实现
+|-- IoTCenterHost.Protos    # 协议定义目录
+|-- config                  # 配置目录
+    |-- data               # 配置文件
+    |-- database           # 数据库配置
+    |-- dll                # 依赖库文件
 ```
 
 注释说明：
