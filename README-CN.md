@@ -15,66 +15,37 @@ GrpcServer采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、
 以下是为目录结构添加的英文注释，基于常见开发实践和文件名推测功能：
 
 ```bash
-|-- Directory.Build.props        # MSBuild global properties (versioning, constants)
-|-- Directory.Build.targets      # MSBuild global targets (build pipeline customization)
-|-- Directory.Packages.props     # NuGet package version management
-|-- GWHost                       # Host application executable
-|   |-- GWRES1.dll               # Main application DLL
-|   `-- Properties               # Assembly info/configuration
-|-- IoTCenterHost.AppServices    # Application services layer
-|   |-- Application              # Business logic implementation
-|   |   `-- Readme.md            # Layer documentation
-|   |-- Interfaces               # Service contracts/interfaces
-|   |-- Properties               # Layer-specific settings
-|   `-- Resources                # Localization resources
-|       |-- LocalizationResource.en-US.resx  # English translations
-|       |-- LocalizationResource.resx        # Neutral language fallback
-|       `-- LocalizationResource.zh-CN.resx  # Chinese translations
-|-- IoTCenterHost.Build          # Build configuration
-|   |-- Dependencies.AspNetCore.props      # ASP.NET Core dependencies
-|   |-- Dependencies.props                 # Shared dependency versions
-|   |-- IoTCenterCore.Commons.props        # Core library build settings
-|   `-- IoTCenterCore.Commons.targets      # Core library build tasks
-|-- IoTCenterHost.Core           # Core business logic
-|   |-- Cache                    # Caching mechanisms
-|   |-- IotModels                # IoT-specific data models
-|   |-- ModelAdapter             # Data model adapters/converters
-|   |-- ProxyModels              # External service proxy models
-|   `-- ServerInterfaces         # Server-side API contracts
-|-- IoTCenterHost.Core.Abstraction  # Abstract core components
-|   |-- BaseModels               # Base class definitions
-|   |-- EnumDefine               # Shared enumerations
-|   |-- Interfaces               # Core service interfaces
-|   |   |-- AppServices          # Application service contracts
-|   |   `-- Services             # Domain service contracts
-|   `-- IoTCenterHost.Core.Abstraction.xml  # XML documentation for IntelliSense
-|-- IoTCenterHost.Core.Extension    # Extensibility points/plugins
-|-- IoTCenterHost.Domain           # Domain-driven design components
-|   `-- Domain                   # Domain logic layer
-|       |-- DO                    # Domain Objects (business entities)
-|       |-- DomainBase            # Base domain classes
-|       |-- PO                    # Persistence Objects (database entities)
-|       `-- VO                    # Value Objects (immutable values)
-|-- IoTCenterHost.GrpcConstract    # gRPC service definitions
-|   |-- GrpcConstract             # Contracts (likely should be "Contract")
-|   |   `-- IotHostService        # gRPC service interface
-|   `-- StartUp                   # gRPC server configuration
-|       `-- Interceptors          # gRPC middleware/interceptors
-|-- IoTCenterHost.Infrastructure  # Infrastructure implementations
-|   |-- IotCenter                 # IoT-specific infrastructure
-|   |   `-- Interface             # IoT device interfaces
-|   `-- Token                     # Authentication/token services
-|-- IoTCenterHost.Protos           # Protocol Buffer definitions (gRPC)
-|-- compile.bat                   # Windows build script
-|-- config                        # Configuration files
-|   |-- data                      # Runtime data files
-|   |   `-- AlarmCenter           # Alarm system configuration
-|   |-- database                  # Database artifacts
-|   |   |-- Database.db           # SQLite database file
-|   |   `-- IoTCenter_MySQL.sql   # MySQL schema/data script
-|   `-- dll                       # Third-party dependencies
-|       `-- BCDataSimu.STD.dll    # Data simulation library
-`-- logo.jpg                      # Application icon/logo
+|-- GWHost
+|   |-- Properties          # 网关主机配置文件（如程序集信息、配置参数）
+|-- IoTCenterHost.AppServices
+|   |-- Application         # 应用服务层（业务逻辑实现）
+|   |-- Interfaces          # 服务接口定义（包含IService等接口）
+|   |-- Properties          # 应用服务层配置文件
+|   |-- Resources           # 资源文件
+|-- IoTCenterHost.Build     # 构建相关配置
+|-- IoTCenterHost.Core
+|   |-- Cache               # 核心缓存模块
+|   |-- IotModels           # IoT核心领域模型
+|   |-- ModelAdapter        # 模型适配器
+|   |-- ProxyModels         # 代理模型层
+|   |-- ServerInterfaces    # 服务器端接口定义
+|-- IoTCenterHost.Core.Abstraction
+|   |-- BaseModels          # 基础模型抽象
+|   |-- EnumDefine          # 全局枚举定义
+|   |-- Interfaces          # 核心抽象接口
+|-- IoTCenterHost.Core.Extension  # 扩展功能实现
+|-- IoTCenterHost.Domain    # 领域驱动设计核心
+|-- IoTCenterHost.GrpcConstract
+|   |-- GrpcConstract       # gRPC服务契约定义（
+|   |-- StartUp             # gRPC服务启动配置（服务注册、中间件）
+|-- IoTCenterHost.Infrastructure
+|   |-- IotCenter           # 基础设施层核心实现
+|   |-- Token               # 认证令牌服务实现（JWT/OAuth相关）
+|-- IoTCenterHost.Protos    # Protocol Buffers协议定义文件
+|-- config
+    |-- data               # 运行时数据配置
+    |-- database           # 数据库
+    |-- dll                # 第三方依赖库
 ```
 
 注释说明：
