@@ -72,7 +72,8 @@ GrpcServer builds a lightweight, high-performance proxy service framework using 
 |   `-- dll
 |       `-- BCDataSimu.STD.dll
 `-- logo.jpg
-```bash
+
+```
 
 ### Source Code Build Instructions  
 For information on how to build GrpcServer from source, please refer to the [Wiki](https://github.com/ganweisoft/GrpcServer/wiki).
