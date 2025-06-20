@@ -51,8 +51,5 @@ For information on how to build GrpcServer from source, please refer to the [Wik
 ### License  
 GrpcServer is licensed under the very permissive MIT License. For details, see [License](https://github.com/ganweisoft/GrpcServer/blob/main/LICENSE).
 
-### Installation Guide  
-Please refer to the [Installation Guide](https://github.com/ganweisoft/GrpcServer/wiki).
-
 ### How to Contribute  
 We warmly welcome contributions from developers. If you find a bug or have any ideas you'd like to share, feel free to submit an [issue](https://github.com/ganweisoft/GrpcServer/blob/main/CONTRIBUTING.md).
