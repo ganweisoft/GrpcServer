@@ -63,9 +63,6 @@ GrpcServer采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、
 
 GrpcServer 使用非常宽松的MIT协议，请见 [License](https://github.com/ganweisoft/GrpcServer/blob/main/LICENSE)。
 
-### 安装指导
-请见 [安装指南](https://github.com/ganweisoft/GrpcServer/wiki)。
-
 ### 如何提交贡献
 
 我们非常欢迎开发者提交贡献, 如果您发现了一个bug或者有一些想法想要交流，欢迎提交一个[issue](https://github.com/ganweisoft/GrpcServer/blob/main/CONTRIBUTING.md).
