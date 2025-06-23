@@ -1,3 +1,4 @@
+//  Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.AppServices.Domain;
 using IoTCenterHost.AppServices.Interfaces;
 using Microsoft.Extensions.Localization;

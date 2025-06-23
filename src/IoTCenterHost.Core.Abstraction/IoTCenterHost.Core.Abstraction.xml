@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
+<!--
+Sample license text.
+-->
 <doc>
     <assembly>
         <name>IoTCenterHost.Core.Abstraction</name>

@@ -1,3 +1,4 @@
+//  Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 
 namespace IoTCenterHost.AppServices.Domain.VO.MemoryData.Curve

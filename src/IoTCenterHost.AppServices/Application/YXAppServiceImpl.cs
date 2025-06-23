@@ -1,3 +1,4 @@
+//  Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.RemoteStatus;
 using IoTCenterHost.AppServices.Infrastructure.IotCenter;

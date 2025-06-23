@@ -1,4 +1,5 @@
-﻿namespace IoTCenterHost.AppServices.Domain.PO
+//  Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+namespace IoTCenterHost.AppServices.Domain.PO
 {
     public partial class AlarmProc
     {
