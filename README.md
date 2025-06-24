@@ -10,9 +10,6 @@ English | [简体中文](README-CN.md)
 
 GrpcServer builds a lightweight, high-performance proxy service framework using the gRPC (Google Remote Procedure Call) protocol. It models communication interfaces using the Protocol Buffers (protobuf) interface definition language, and supports cross-language and cross-platform service integration and invocation.
 
-### Source Code Build Instructions  
-For information on how to build GrpcServer from source, please refer to the [Wiki](https://github.com/ganweisoft/GrpcServer/wiki).
-
 ### License  
 GrpcServer is licensed under the very permissive MIT License. For details, see [License](https://github.com/ganweisoft/GrpcServer/blob/main/LICENSE).
 
