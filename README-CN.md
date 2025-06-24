@@ -10,21 +10,6 @@
 
 GrpcServer采用 gRPC（Google Remote Procedure Call）协议 构建轻量级、高性能的代理服务框架，基于 Protocol Buffers（protobuf） 接口定义语言进行通信接口建模，支持跨语言、跨平台的服务集成与调用。
 
-### 源码构建说明
-
-以下是为目录结构添加的英文注释，基于常见开发实践和文件名推测功能：
-
-注释说明：
-1. 层级结构使用标准开发目录命名约定
-2. 重点标注了：
-   - 构建系统配置（MSBuild相关）
-   - 分层架构（Application/Domain/Infrastructure）
-   - 领域驱动设计模式（DO/PO/VO）
-   - 通信协议（gRPC）
-   - 本地化资源管理
-   - 依赖管理策略
-3. 保留了原始目录名中的拼写（如GrpcConstract可能是Contract的拼写错误）
-4. 对常见文件类型进行了功能推测（.resx=资源文件，.props=MSBuild属性文件等）
 ### License
 
 GrpcServer 使用非常宽松的MIT协议，请见 [License](https://github.com/ganweisoft/GrpcServer/blob/main/LICENSE)。
