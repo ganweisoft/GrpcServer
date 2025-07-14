@@ -1,4 +1,4 @@
-//  Copyright (c) 2025 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using GWDataCenter.Database;
 using IoTCenterHost.AppServices.Domain.PO;
