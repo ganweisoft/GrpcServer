@@ -1,12 +1,14 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
-using IoTCenterHost.AppServices.Infrastructure.Token;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace IoTCenterHost.AppServices.Infrastructure.IotCenter
+namespace IoTCenterHost.AppServices.AppServices
 {
     public class IotRealTimeDataServiceImpl : IotRealTimeDataService
     {

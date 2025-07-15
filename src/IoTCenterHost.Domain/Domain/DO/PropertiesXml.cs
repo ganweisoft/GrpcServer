@@ -4,7 +4,6 @@ using IoTCenterHost.AppServices.Domain.WebOptions;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Domain.Domain.DO.DbConnections;
 using System.Reflection;
-using System.Text;
 
 namespace IoTCenterHost.AppServices.Domain
 {
@@ -24,7 +23,7 @@ namespace IoTCenterHost.AppServices.Domain
         public string HttpsCertFile { get; set; }
 
         public string SingleAppStart { get; set; }
-       
+
 
         public string UILanguage { get; set; }
         public IEnumerable<DbConnection> DbConnections
@@ -60,9 +59,9 @@ namespace IoTCenterHost.AppServices.Domain
             {
                 var directoryInfo = new DirectoryInfo(Assembly.GetEntryAssembly().Location).Parent.Parent.FullName;
 
-                string configurationXml =  Path.Combine(directoryInfo, "data", "AlarmCenter", "AlarmCenterProperties.xml");
+                string configurationXml = Path.Combine(directoryInfo, "data", "AlarmCenter", "AlarmCenterProperties.xml");
 
-                var path = FileExtension.ReadXml(configurationXml, "HostServer",  "HostIpAddr"); 
+                var path = FileExtension.ReadXml(configurationXml, "HostServer", "HostIpAddr");
 
                 string port = FileExtension.ReadXml(configurationXml, "HostServer", "MQPort");
 
@@ -74,7 +73,7 @@ namespace IoTCenterHost.AppServices.Domain
 
                 string httpPort = FileExtension.ReadXml(configurationXml, "HostServer", "HttpPort");
 
-                string language =  GWDataCenter.DataCenter.GetPropertyFromPropertyService("CoreProperties.UILanguage", "", "");
+                string language = GWDataCenter.DataCenter.GetPropertyFromPropertyService("CoreProperties.UILanguage", "", "");
 
                 string password = FileExtension.ReadXml(configurationXml, "HostServer", "HttpsPassword");
 
@@ -102,7 +101,7 @@ namespace IoTCenterHost.AppServices.Domain
                 var allowOriginsStr = GWDataCenter.DataCenter.GetPropertyFromPropertyService("AllowOrigins", "", "");
 
                 var singleAppStartStr = FileExtension.ReadXml(configurationXml, "HostServer", "SingleAppStart");
-              
+
 
                 return new PropertiesXml
                 {
@@ -143,7 +142,7 @@ namespace IoTCenterHost.AppServices.Domain
 
             try
             {
-                
+
                 if (!string.IsNullOrEmpty(inputProp.HttpsPort) && inputProp.HttpsPort != Default.HttpsPort)
                 {
                     GWDataCenter.DataCenter.SetPropertyToPropertyService("HostServer", "HttpsPort", inputProp.HttpsPort);
@@ -177,7 +176,7 @@ namespace IoTCenterHost.AppServices.Domain
                     Default.HostIpAddr = inputProp.HostIpAddr;
                 }
 
-            
+
 
                 if (!string.IsNullOrEmpty(inputProp.SingleAppStart) && inputProp.SingleAppStart != Default.SingleAppStart)
                 {

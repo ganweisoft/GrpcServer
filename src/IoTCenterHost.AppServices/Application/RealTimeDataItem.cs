@@ -1,17 +1,22 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
-using IoTCenterHost.AppServices.Infrastructure.Token;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.BaseModels;
 using IoTCenterHost.Core.Abstraction.IotModels;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.ProxyModels;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
+using System;
 using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Diagnostics;
+using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 
-namespace IoTCenterHost.AppServices.Infrastructure.IotCenter
+namespace IoTCenterHost.AppServices.AppServices
 {
     public class RealTimeDataItem : IDisposable
     {
@@ -87,7 +92,7 @@ namespace IoTCenterHost.AppServices.Infrastructure.IotCenter
 
         public RealTimeDataItem SetCurrentUser(LoginUser loginUser)
         {
-            if(loginUser == null) return this;
+            if (loginUser == null) return this;
             if (_currentUserItemDict.ContainsKey(loginUser.LoginMark))
             {
                 _currentUserItemDict.TryGetValue(loginUser.LoginMark, out _currentUserItem);

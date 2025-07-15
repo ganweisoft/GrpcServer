@@ -1,6 +1,5 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.AppServices.Domain.DO.User;
-using IoTCenterHost.AppServices.Infrastructure.Token;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;

@@ -4,10 +4,10 @@ using Grpc.Core;
 using GWDataCenter;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using IoTCenterHost.Core.ServerInterfaces;
-using IoTCenterHost.Proto;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using IoTCenterHost.Proto;
 
 namespace IoTCenterHost.AppServices.GrpcConstracts.IotHostService
 {

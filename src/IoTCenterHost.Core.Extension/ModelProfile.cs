@@ -1,28 +1,21 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using AutoMapper;
+using System;
 using System.Linq.Expressions;
 
-namespace IoTCenterHost.AppServices.Infrastructure
+namespace IoTCenterHost.Core.Extension
 {
     public class ModelProfile<TSource, TDestination>
     {
-        #region 字段
         private IMappingExpression<TSource, TDestination> _mappingExpression;
         private ModelProfile _profile;
-        #endregion
 
-        #region 构造函数
         private ModelProfile()
         {
             _profile = new ModelProfile();
         }
-        #endregion
-
-        #region 属性
         public Profile AutomapperProfile => _profile;
-        #endregion
 
-        #region 方法
         public static ModelProfile<TSource, TDestination> CreateMap()
         {
             var result = new ModelProfile<TSource, TDestination>();
@@ -53,12 +46,9 @@ namespace IoTCenterHost.AppServices.Infrastructure
             _mappingExpression = _mappingExpression.ForMember(destinationMember, config => config.Ignore());
             return this;
         }
-        #endregion
     }
 
-    #region 内部类
     class ModelProfile : Profile
     {
     }
-    #endregion
 }

@@ -2,12 +2,13 @@
 using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.Equip;
 using IoTCenterHost.AppServices.Domain.VO.Message;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction.IotModels;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.ServerInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;

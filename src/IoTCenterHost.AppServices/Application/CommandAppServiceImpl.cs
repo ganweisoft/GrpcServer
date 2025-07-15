@@ -2,11 +2,10 @@
 using GWDataCenter;
 using GWDataCenter.Database;
 using IoTCenterHost.AppServices.Domain.DO.Equip.Service;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;

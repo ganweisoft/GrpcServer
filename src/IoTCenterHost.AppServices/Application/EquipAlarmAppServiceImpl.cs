@@ -5,6 +5,7 @@ using IoTCenterHost.AppServices.Domain.DO.RemoteValue;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
 
 namespace IoTCenterHost.AppServices.AppServices
 {

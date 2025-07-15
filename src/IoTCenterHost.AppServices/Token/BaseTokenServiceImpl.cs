@@ -2,7 +2,7 @@
 using IoTCenterHost.Core.Abstraction;
 using Microsoft.Extensions.Configuration;
 
-namespace IoTCenterHost.AppServices.Infrastructure.Token
+namespace IoTCenterHost.AppServices
 {
     public abstract class BaseTokenServiceImpl
     {

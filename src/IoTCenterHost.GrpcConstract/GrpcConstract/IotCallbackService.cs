@@ -1,7 +1,7 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Proto;
 using Microsoft.AspNetCore.Authorization;

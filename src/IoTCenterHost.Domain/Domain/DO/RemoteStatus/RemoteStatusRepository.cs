@@ -4,6 +4,7 @@ using GWDataCenter.Database;
 using IoTCenterHost.AppServices.Domain.PO;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
 
 namespace IoTCenterHost.AppServices.Domain.DO.RemoteStatus
 {

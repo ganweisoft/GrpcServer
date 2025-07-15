@@ -1,16 +1,14 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using AutoMapper;
 using IoTCenterHost.AppServices.Application;
+using IoTCenterHost.AppServices.AppServices;
 using IoTCenterHost.AppServices.Domain.PO;
 using IoTCenterHost.AppServices.GrpcConstracts;
 using IoTCenterHost.AppServices.GrpcConstracts.IotHostService;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
-using IoTCenterHost.AppServices.Infrastructure.Token;
 using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.AppServices.StartUp;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.Startup;
-using IoTCenterHost.Domain.Domain.DO;
 using IoTCenterHost.GrpcConstract.GrpcConstract;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;

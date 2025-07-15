@@ -42,7 +42,6 @@
     <ProjectReference Include="..\IoTCenterHost.Core.Extension\IoTCenterHost.Core.Extension.csproj" />
     <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
     <ProjectReference Include="..\IoTCenterHost.Domain\IoTCenterHost.Domain.csproj" />
-    <ProjectReference Include="..\IoTCenterHost.Infrastructure\IoTCenterHost.Infrastructure.csproj" />
   </ItemGroup>
 
   <ProjectExtensions><VisualStudio><UserProperties properties_4launchsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>

@@ -1,7 +1,9 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
+using IoTCenterHost.AppServices.Interfaces;
+using OpenGWDataCenter.Model;
 
-namespace IoTCenterHost.AppServices.Infrastructure.IotCenter
+namespace IoTCenterHost.AppServices.AppServices
 {
     public class IotCenterServiceImpl : IotCenterService
     {

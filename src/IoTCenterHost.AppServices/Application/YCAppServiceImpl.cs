@@ -1,7 +1,7 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.RemoteValue;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.IotModels;
 using IoTCenterHost.Core.Extension;

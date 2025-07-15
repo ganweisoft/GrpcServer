@@ -9,11 +9,10 @@ using IoTCenterHost.AppServices.Domain.DO.Role;
 using IoTCenterHost.AppServices.Domain.DO.User;
 using IoTCenterHost.AppServices.Domain.VO.MemoryData.Curve;
 using IoTCenterHost.AppServices.Domain.VO.Message;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using IoTCenterHost.Core.ServerInterfaces;
-using IoTCenterHost.Domain.Domain.DO;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace IoTCenterHost.AppServices

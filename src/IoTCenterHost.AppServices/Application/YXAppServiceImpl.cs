@@ -1,13 +1,13 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
-using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.RemoteStatus;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.IotModels;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.ServerInterfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;

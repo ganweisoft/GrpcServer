@@ -1,9 +1,10 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace IoTCenterHost.AppServices.Infrastructure
+namespace IoTCenterHost.Core.Extension
 {
     [ExcludeFromCodeCoverage]
     public static class HashHelper

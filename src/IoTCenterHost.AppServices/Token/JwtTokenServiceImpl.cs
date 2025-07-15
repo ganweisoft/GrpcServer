@@ -3,10 +3,11 @@ using IoTCenterHost.Core.Abstraction;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace IoTCenterHost.AppServices.Infrastructure.Token
+namespace IoTCenterHost.AppServices
 {
     public class JwtTokenServiceImpl : BaseTokenServiceImpl, ITokenService
     {

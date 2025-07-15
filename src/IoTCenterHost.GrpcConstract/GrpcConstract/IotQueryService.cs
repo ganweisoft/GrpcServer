@@ -6,8 +6,9 @@ using IoTCenterHost.Core.Abstraction.IotModels;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.ProxyModels;
 using IoTCenterHost.Core.ServerInterfaces;
-using IoTCenterHost.Proto;
 using Microsoft.AspNetCore.Authorization;
+using IoTCenterHost.Proto;
+
 
 namespace IoTCenterHost.AppServices.GrpcConstracts
 {

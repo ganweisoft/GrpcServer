@@ -1,5 +1,5 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
-namespace IoTCenterHost.AppServices.Infrastructure.Token
+namespace IoTCenterHost.AppServices
 {
     public interface ITokenService
     {

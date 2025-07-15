@@ -1,6 +1,7 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using IoTCenterHost.Core.Extension;
+using OpenGWDataCenter.Model;
 using System;
 
 namespace IoTCenterHost.Core.ProxyModels

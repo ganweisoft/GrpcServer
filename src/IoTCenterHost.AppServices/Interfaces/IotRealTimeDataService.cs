@@ -1,7 +1,7 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
-using IoTCenterHost.AppServices.Infrastructure.Token;
+using IoTCenterHost.AppServices.AppServices;
 
-namespace IoTCenterHost.AppServices.Infrastructure.IotCenter
+namespace IoTCenterHost.AppServices.Interfaces
 {
     public interface IotRealTimeDataService
     {

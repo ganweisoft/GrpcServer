@@ -1,4 +1,5 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.Role;
 using IoTCenterHost.AppServices.Domain.PO;
 using IoTCenterHost.Core;
@@ -105,17 +106,31 @@ namespace IoTCenterHost.AppServices.Domain.DO.User
                 TimeSpan.FromSeconds(30)
             );
 
+            // 提前获取解密密钥，避免重复生成
+            var aesKey = DataCenter.GeneratAESKey();
+
+            // 通用解密函数
+            string Decrypt(string input) => string.IsNullOrWhiteSpace(input) ? "" : DataCenter.AESDecrypt(input, aesKey);
+
+            // 解密字段
+            var decryptedUserName = Decrypt(userEntity.Name);
+            var decryptedPassword = Decrypt(userEntity.Password);
+            var decryptedControlLevel = Decrypt(userEntity.ControlLevel);
+            var decryptedRoles = Decrypt(userEntity.Roles);
+            var decryptedHomePages = Decrypt(userEntity.HomePages);
+            var decryptedAutoInspectionPages = Decrypt(userEntity.AutoInspectionPages);
+
             return new GWUserItem
             {
                 ID = userEntity.ID,
                 Remark = userEntity.Remark ?? "",
-                UserName = userEntity.Name ?? "",
-                UserPWD = userEntity.Password ?? "",
-                ControlLevel = string.IsNullOrWhiteSpace(userEntity.ControlLevel) ? 1 : int.Parse(userEntity.ControlLevel),
-                IsAdministrator = !string.IsNullOrWhiteSpace(userEntity.Roles) && GetAdministrator(userEntity.Roles),
-                Role_List = string.IsNullOrWhiteSpace(userEntity.Roles) ? null : GetRoleItems(userEntity.Roles, roleItems),
-                HomePage_List = string.IsNullOrWhiteSpace(userEntity.HomePages) ? null : userEntity.HomePages.GetHomePageList(),
-                AutoInspectionPages_List = string.IsNullOrWhiteSpace(userEntity.AutoInspectionPages) ? null : userEntity.AutoInspectionPages.GetAutoInspectionPages(),
+                UserName = decryptedUserName,
+                UserPWD = decryptedPassword,
+                ControlLevel = int.TryParse(decryptedControlLevel, out int level) ? level : 1,
+                IsAdministrator = !string.IsNullOrWhiteSpace(decryptedRoles) && GetAdministrator(decryptedRoles),
+                Role_List = string.IsNullOrWhiteSpace(decryptedRoles) ? null : GetRoleItems(decryptedRoles, roleItems),
+                HomePage_List = string.IsNullOrWhiteSpace(decryptedHomePages) ? null : decryptedHomePages.GetHomePageList(),
+                AutoInspectionPages_List = string.IsNullOrWhiteSpace(decryptedAutoInspectionPages) ? null : decryptedAutoInspectionPages.GetAutoInspectionPages()
             };
         }
 

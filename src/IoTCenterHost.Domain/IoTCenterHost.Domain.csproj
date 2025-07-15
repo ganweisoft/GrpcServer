@@ -9,8 +9,11 @@
 	  <RunAnalyzersDuringLiveAnalysis>False</RunAnalyzersDuringLiveAnalysis>
 	  <RunAnalyzersDuringBuild>False</RunAnalyzersDuringBuild>
   </PropertyGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\IoTCenterHost.Infrastructure\IoTCenterHost.Infrastructure.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
+	  <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
+	</ItemGroup>
 </Project>

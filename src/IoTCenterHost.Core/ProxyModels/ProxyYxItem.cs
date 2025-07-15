@@ -1,6 +1,7 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Extension;
+using OpenGWDataCenter.Model;
 using ProtoBuf;
 using System;
 
@@ -13,7 +14,7 @@ namespace IoTCenterHost.Core.ProxyModels
         {
 
         }
-        public ProxyYxItem(GWDataCenter.YXItem o)
+        public ProxyYxItem(YXItem o)
         {
             m_iEquipNo = o.Equip_no;
             m_iYXNo = o.Yx_no;

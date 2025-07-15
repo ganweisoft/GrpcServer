@@ -1,7 +1,6 @@
 //  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.AppServices.Domain.DO.User;
-using IoTCenterHost.AppServices.Infrastructure.IotCenter;
-using IoTCenterHost.AppServices.Infrastructure.Token;
+using IoTCenterHost.AppServices.Interfaces;
 using IoTCenterHost.Core.Abstraction;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using IoTCenterHost.Core.Abstraction.EnumDefine;

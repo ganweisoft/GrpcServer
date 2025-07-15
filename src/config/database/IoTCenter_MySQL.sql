@@ -598,8 +598,16 @@ CREATE TABLE `gwuser` (
   PRIMARY KEY (`ID`) USING BTREE
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
-INSERT INTO `GWUser` (`ID`, `Name`, `Password`, `Roles`, `HomePages`, `AutoInspectionPages`, `Remark`, `ControlLevel`, `Reserve1`, `Reserve2`, `Reserve3`, `PwdUpdateTime`, `FirstLogin`, `HistoryPasswords`, `AccessFailedCount`, `LockoutEnabled`, `LockoutEnd`, `SecurityStamp`, `UseExpiredTime`) 
-VALUES (1, 'admin', 'ganwei.123', 'ADMIN', '', '', '1', '1', '', '', '', '2025-03-21 08:31:25', 0, '', 0, 0, NULL, '', NULL);
+INSERT INTO `GWUser` (
+  `ID`, `Name`, `Password`, `Roles`, `HomePages`, `AutoInspectionPages`, `Remark`, 
+  `ControlLevel`, `Reserve1`, `Reserve2`, `Reserve3`, `PwdUpdateTime`, 
+  `FirstLogin`, `HistoryPasswords`, `AccessFailedCount`, `LockoutEnabled`, 
+  `LockoutEnd`, `SecurityStamp`, `UseExpiredTime`
+) VALUES (
+  1, '/sLVCSQAae4hS2T6yxohPA==', 'czfMnBnCRjTkBTa8btKgKQ==', '6p4c1NnjPj8BJAHf5sWMnA==',
+  '', '', '', 'iIMniI0QKZ6XZW3dwC+eeA==', '', '', '',
+  '2025-03-21 08:31:25', 1, '', 0, 0, NULL, '', NULL
+);
 
 -- ----------------------------
 -- Table structure for gwzichanrecord
@@ -780,8 +788,13 @@ CREATE TABLE `iotsetparm` (
 -- ----------------------------
 -- Records of iotsetparm
 -- ----------------------------
-INSERT INTO `iotsetparm` VALUES ('1', '2', '1', '遥测设置1', 'V', 'SetYCYXValue', 'C_1', '1', '设置', '1', '0', '', '1', '0', '11', '22', '33', null);
-INSERT INTO `iotsetparm` VALUES ('1', '2', '2', '遥测设置2', 'V', 'SetYCYXValue', 'C_2', '1', '设置', '1', '0', '', '1', '0', '11', '22', '33', null);
+
+INSERT INTO `iotsetparm` VALUES ('1', '2', '1', '温度设置', 'V', 'SetYCYXValue', 'C_1', '1', '设置', '1', '0', '', '0', '0', '', '', '', 'SetTemperatureValue');
+INSERT INTO `iotsetparm` VALUES ('1', '2', '2', '湿度设置', 'V', 'SetYCYXValue', 'C_2', '1', '设置', '0', '0', '', '0', '0', '', '', '', 'SetHumidnessValue');
+INSERT INTO `iotsetparm` VALUES ('1', '2', '3', '遥信报警设置', 'X', 'SetYCYXValue', 'X_1', '1', '设置', '0', '0', '1', '0', '0', '', '', '', 'SetSignalingAlarm');
+INSERT INTO `iotsetparm` VALUES ('1', '2', '4', '遥信正常设置', 'X', 'SetYCYXValue', 'X_1', '1', '设置', '1', '0', '1', '0', '0', '', '', '', 'SetSignalingNormal');
+INSERT INTO `iotsetparm` VALUES ('1', '2', '5', '模拟产生事件', 'X', 'AddEvent', '我是事件内容', '1', '设置', '1', '0', '1', '0', '0', NULL, NULL, NULL, 'SetAddEvent');
+INSERT INTO `iotsetparm` VALUES ('1', '2', '6', '模拟通讯故障', 'X', 'SetCommState', '0', '1', '设置', '1', '0', '1', '0', '0', NULL, NULL, NULL, 'SetCommState');
 
 -- ----------------------------
 
@@ -838,8 +851,8 @@ CREATE TABLE `iotycp` (
 -- ----------------------------
 -- Records of iotycp
 -- ----------------------------
-INSERT INTO `iotycp` VALUES ('1', '2', '1', '温度', '0', '31', '32', '15', '20', '15', '16', '31', '32', '0', '0', '1', null, null, '0', '0', '0', null, '3', '', '', '', '', '0', '0', '0', '', '', '0', '', '', '', '', '', '', '', null, null);
-INSERT INTO `iotycp` VALUES ('1', '2', '2', '湿度', '0', '80', '90', '20', '30', '15', '16', '80', '90', '0', '0', '1', null, null, '0', '0', '0', null, '3', '', '', '', '', '0', '0', '0', '', '', '0', '', '', '', '', '', '', '', null, null);
+INSERT INTO `iotycp` VALUES ('1', '2', '1', '温度', '0', '31', '32', '15', '20', '15', '16', '31', '32', '0', '0', '1', null, null, '0', '0', '0', null, '3', '', '', '', '', '0', '0', '0', '', '', '0', '', '', '', '', '', '', '', 'Temperature', null);
+INSERT INTO `iotycp` VALUES ('1', '2', '2', '湿度', '0', '80', '90', '20', '30', '15', '16', '80', '90', '0', '0', '1', null, null, '0', '0', '0', null, '3', '', '', '', '', '0', '0', '0', '', '', '0', '', '', '', '', '', '', '', 'Humidness', null);
 
 -- ----------------------------
 -- Table structure for iotyxp
@@ -883,6 +896,24 @@ CREATE TABLE `iotyxp` (
   `datatype` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`equip_no`,`yx_no`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+
+INSERT INTO `iotyxp` (
+  `sta_n`, `equip_no`, `yx_no`, `yx_nm`, `proc_advice_r`, `proc_advice_d`, 
+  `level_r`, `level_d`, `evt_01`, `evt_10`, `main_instruction`, `minor_instruction`, 
+  `safe_bgn`, `safe_end`, `alarm_acceptable_time`, `restore_acceptable_time`, 
+  `alarm_repeat_time`, `wave_file`, `related_pic`, `alarm_scheme`, 
+  `inversion`, `curve_rcd`, `initval`, `val_trait`, `alarm_shield`, 
+  `AlarmRiseCycle`, `Reserve1`, `Reserve2`, `Reserve3`, 
+  `related_video`, `ZiChanID`, `PlanNo`, `SafeTime`, `yx_code`, `datatype`
+) VALUES (
+  1, 2, 1, '遥信', '请处理', '请处理', 
+  2, 3, '正常', '报警', '02', '0000.0', 
+  '2020-05-13 00:00:00', '2020-05-13 00:00:00', 0, 0, 
+  0, 'YX62_1_0.wav/YX62_1_1.wav', '', 3, 
+  0, 0, 0, 0, '', 
+  0, '', '', '', 
+  '', '0', '0', '', 'SignalingStatus', ''
+);
 
 -- ----------------------------
 -- Records of iotyxp

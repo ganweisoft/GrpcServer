@@ -3,6 +3,7 @@ using GWDataCenter;
 using GWDataCenter.Database;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OpenGWDataCenter.Model;
 using System.Diagnostics;
 using System.Text;
 

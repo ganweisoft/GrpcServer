@@ -4,7 +4,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- OpenGWDataCenter -->
-		<PackageVersion Include="OpenGWDataCenter" Version="9.0.0.1"/>
+		<PackageVersion Include="OpenGWDataCenter" Version="9.0.0.2"/>
 		<!-- Testing and Coverage -->
 		<PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
 		<PackageVersion Include="Moq" Version="4.20.70" />
