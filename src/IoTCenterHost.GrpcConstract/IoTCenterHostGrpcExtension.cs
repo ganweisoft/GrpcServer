@@ -1,4 +1,4 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using AutoMapper;
 using IoTCenterHost.AppServices.Application;
 using IoTCenterHost.AppServices.AppServices;
@@ -6,6 +6,7 @@ using IoTCenterHost.AppServices.Domain.PO;
 using IoTCenterHost.AppServices.GrpcConstracts;
 using IoTCenterHost.AppServices.GrpcConstracts.IotHostService;
 using IoTCenterHost.AppServices.Interfaces;
+using IoTCenterHost.AppServices.Interfaces.Token;
 using IoTCenterHost.AppServices.StartUp;
 using IoTCenterHost.Core.Extension;
 using IoTCenterHost.Core.Startup;

@@ -1,4 +1,4 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using GWDataCenter;
 using IoTCenterHost.AppServices.Domain.DO.Role;
 using IoTCenterHost.AppServices.Domain.PO;
@@ -106,13 +106,10 @@ namespace IoTCenterHost.AppServices.Domain.DO.User
                 TimeSpan.FromSeconds(30)
             );
 
-            // 提前获取解密密钥，避免重复生成
             var aesKey = DataCenter.GeneratAESKey();
 
-            // 通用解密函数
             string Decrypt(string input) => string.IsNullOrWhiteSpace(input) ? "" : DataCenter.AESDecrypt(input, aesKey);
 
-            // 解密字段
             var decryptedUserName = Decrypt(userEntity.Name);
             var decryptedPassword = Decrypt(userEntity.Password);
             var decryptedControlLevel = Decrypt(userEntity.ControlLevel);

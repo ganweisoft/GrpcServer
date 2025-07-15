@@ -1,4 +1,4 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.Core.Abstraction;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
@@ -7,7 +7,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 
-namespace IoTCenterHost.AppServices
+namespace IoTCenterHost.AppServices.Interfaces.Token
 {
     public class JwtTokenServiceImpl : BaseTokenServiceImpl, ITokenService
     {
@@ -31,7 +31,7 @@ namespace IoTCenterHost.AppServices
         {
             if (!ValidateConfig(loginUser)) return string.Empty;
 
-            base.SetTokenToMemory(loginUser.LoginMark, loginUser);
+            SetTokenToMemory(loginUser.LoginMark, loginUser);
 
             var claims = new[]
             {

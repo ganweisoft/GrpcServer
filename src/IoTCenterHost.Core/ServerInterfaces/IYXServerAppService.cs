@@ -1,4 +1,5 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
+using GWDataCenter;
 using IoTCenterHost.Core.Abstraction.AppServices;
 using OpenGWDataCenter.Model;
 using System.Collections.Generic;

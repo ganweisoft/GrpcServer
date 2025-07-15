@@ -1,8 +1,8 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.Core.Abstraction.IotModels;
 using System;
 
-namespace IoTCenterHost.AppServices
+namespace IoTCenterHost.AppServices.Interfaces.Token
 {
     public class LoginUser
     {

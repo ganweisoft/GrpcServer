@@ -1,9 +1,9 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.Core.Abstraction;
 using Microsoft.Extensions.Configuration;
 using System;
 
-namespace IoTCenterHost.AppServices
+namespace IoTCenterHost.AppServices.Interfaces.Token
 {
     public class SimpleTokenServiceImpl : BaseTokenServiceImpl, ITokenService
     {
@@ -13,7 +13,7 @@ namespace IoTCenterHost.AppServices
         public string WriteToken(string connectId, LoginUser loginUser)
         {
             string token = Guid.NewGuid().ToString();
-            base.SetTokenToMemory<LoginUser>(token, loginUser);
+            SetTokenToMemory(token, loginUser);
             return token;
         }
         public string RefreshToken(string connectId, string token)

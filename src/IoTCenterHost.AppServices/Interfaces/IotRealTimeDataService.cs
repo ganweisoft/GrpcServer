@@ -1,5 +1,6 @@
-//  Copyright (c) 2020 Shenzhen Ganwei Software Technology Co., Ltd
+//  Copyright (c) 2020-2025 Shenzhen Ganwei Software Technology Co., Ltd
 using IoTCenterHost.AppServices.AppServices;
+using IoTCenterHost.AppServices.Interfaces.Token;
 
 namespace IoTCenterHost.AppServices.Interfaces
 {
