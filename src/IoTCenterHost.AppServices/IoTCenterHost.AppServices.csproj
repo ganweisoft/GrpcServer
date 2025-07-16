@@ -38,9 +38,6 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
-    <ProjectReference Include="..\IoTCenterHost.Core.Extension\IoTCenterHost.Core.Extension.csproj" />
-    <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
     <ProjectReference Include="..\IoTCenterHost.Domain\IoTCenterHost.Domain.csproj" />
   </ItemGroup>
 

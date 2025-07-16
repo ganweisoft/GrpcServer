@@ -13,7 +13,6 @@
 		<PackageReference Include="Microsoft.EntityFrameworkCore" />
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
 	  <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
 	</ItemGroup>
 </Project>

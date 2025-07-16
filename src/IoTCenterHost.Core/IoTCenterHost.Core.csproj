@@ -37,7 +37,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\..\..\Gateway\GWDataCenter\OpenGWDataCenter.csproj" />
 		<ProjectReference Include="..\IoTCenterHost.Core.Abstraction\IoTCenterHost.Core.Abstraction.csproj" />
 		<ProjectReference Include="..\IoTCenterHost.Core.Extension\IoTCenterHost.Core.Extension.csproj" />
 	</ItemGroup>
