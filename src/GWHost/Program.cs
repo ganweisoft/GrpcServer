@@ -2,10 +2,12 @@
 using GWDataCenter;
 using GWHost;
 using IoTCenterHost.Core.Extension;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting.WindowsServices;
 using Serilog;
 using Serilog.Events;
 using System;
@@ -25,9 +27,16 @@ namespace GwWebHost
         private const string anyIpAddr = "0.0.0.0";
         private static string configurationXml = "";
 
+        static Program()
+        {
+            if (WindowsServiceHelpers.IsWindowsService())
+            {
+                Directory.SetCurrentDirectory(AppContext.BaseDirectory);
+            }
+        }
+
         public static async Task Main(string[] args)
         {
-
             string RootPathName = Path.Combine(General.GetApplicationRootPath(), "database");
             string RootBakPathName = Path.Combine(General.GetApplicationRootPath(), "databak");
             configurationXml = Path.Combine(Directory.GetParent(AppContext.BaseDirectory).Parent.FullName, "data", "AlarmCenter", "AlarmCenterProperties.xml");
