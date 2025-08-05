@@ -117,9 +117,12 @@ namespace GwWebHost
             string sslPassword = string.Empty;
             string httpPort = FileExtension.ReadXml(configurationXml, "HostServer", "HttpPort");
             string httpsPort = FileExtension.ReadXml(configurationXml, "HostServer", "HttpsPort");
+            string daprPort = FileExtension.ReadXml(configurationXml, "HostServer", "DaprPort");
             if (int.TryParse(httpsPort, out int port))
                 IsPortUseable(port, out string msg);
             if (int.TryParse(httpPort, out port))
+                IsPortUseable(port, out string msg);
+            if (int.TryParse(daprPort, out port))
                 IsPortUseable(port, out string msg);
 
             var path = FileExtension.ReadXml(configurationXml, "HostServer", "Urls");// GWDataCenter.DataCenter.GetPropertyFromPropertyService("HostServer", "Urls", "");
@@ -151,7 +154,7 @@ namespace GwWebHost
                             {
                                 options.ListenLocalhost(Convert.ToInt32(httpPort), listenOptions => { listenOptions.Protocols = HttpProtocols.Http2; });
                             }
-                            url += $"http://{hostIpAddress}:{httpPort}";
+                            url += $"http://{hostIpAddress}:{httpPort} for http";
                         }
                         if (!string.IsNullOrWhiteSpace(httpsPort))
                         {
@@ -171,12 +174,21 @@ namespace GwWebHost
 
                                     options.ConfigureHttpsDefaults(s => { s.SslProtocols = SslProtocols.Tls12; });
 
-                                    url += $";https://{hostIpAddress}:{httpsPort}";
+                                    url += $";https://{hostIpAddress}:{httpsPort} for httpsPort";
                                 }
                                 else
                                 {
-                                    url += $";http://{hostIpAddress}:{httpsPort}";
+                                    url += $";http://{hostIpAddress}:{httpsPort} for netmq";
                                 }
+                                listenOption.Protocols = HttpProtocols.Http1;
+                            });
+                        }
+                        if (!string.IsNullOrEmpty(daprPort))
+                        {
+                            // 使用dapr端口
+                            options.Listen(ipAddr, Convert.ToInt32(daprPort), listenOption =>
+                            {
+                                url += $";http://127.0.0.1:{daprPort} for dapr";
                                 listenOption.Protocols = HttpProtocols.Http1;
                             });
                         }

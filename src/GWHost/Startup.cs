@@ -24,6 +24,8 @@ using System.Text.Encodings.Web;
 using System.Text.Unicode;
 using System.Threading;
 using System.Threading.Tasks;
+using IoTCenterHost.Dapr;
+using IoTCenterHost.Dapr.Controllers;
 
 namespace GwWebHost
 {
@@ -64,13 +66,18 @@ namespace GwWebHost
         }
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers().AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
-            });
+            var assembly = typeof(DataReportController).Assembly;
+            var mvcBuilder = services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
+                });
+
+            mvcBuilder.AddHostDapr();
+            mvcBuilder.AddApplicationPart(assembly);
 
             var supportedCultures = new[]
-{
+            {
                 new CultureInfo("zh-CN"),
                 new CultureInfo("en-US"),
             };
@@ -127,7 +134,11 @@ namespace GwWebHost
             {
                 app.UseDeveloperExceptionPage();
             }
+
             app.UseRouting();
+
+            // Add dapr sub
+            app.UseDapr();
 
             app.UseGrpcWeb();
 
@@ -153,10 +164,15 @@ namespace GwWebHost
 
             app.UseEndpoints(endpoints =>
             {
+                // Add dapr sub
+                endpoints.MapDapr();
+                endpoints.MapControllers();
+
                 if (_isEnableGrpc)
                 {
                     IoTCenterHostGrpcExtension.MapGrpcServices(endpoints);
                 }
+
                 endpoints.MapGet("/", async context =>
                 {
                     if (string.Equals(language, "en-US"))
@@ -179,16 +195,6 @@ namespace GwWebHost
                 });
                 endpoints.MapGrpcHealthChecksService();
             });
-            app.Use(
-              next =>
-              {
-                  return async context =>
-                  {
-                      await context.Response.WriteAsync("欢迎使用IoTCenter物联网服务");
-                  };
-              });
-
-
 
             string logStr = "";
             if (string.Equals(language, "en-US"))

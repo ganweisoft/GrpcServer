@@ -40,6 +40,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IoTCenterHost.Core\IoTCenterHost.Core.csproj" />
+    <ProjectReference Include="..\IoTCenterHost.Dapr\IoTCenterHost.Dapr.csproj" />
     <ProjectReference Include="..\IoTCenterHost.GrpcConstract\IoTCenterHost.GrpcConstract.csproj" />
   </ItemGroup>
 

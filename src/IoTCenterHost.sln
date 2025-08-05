@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GWHost", "GWHost\GWHost.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTCenterHost.AppServices", "IoTCenterHost.AppServices\IoTCenterHost.AppServices.csproj", "{D2CA686C-28B0-9E41-6E82-867C0CA5E0F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IoTCenterHost.Dapr", "IoTCenterHost.Dapr\IoTCenterHost.Dapr.csproj", "{5379533D-A68C-44DD-8200-969DE66373CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -152,6 +154,20 @@ Global
 		{D2CA686C-28B0-9E41-6E82-867C0CA5E0F4}.shuiwu|Any CPU.Build.0 = Development|Any CPU
 		{D2CA686C-28B0-9E41-6E82-867C0CA5E0F4}.Staging|Any CPU.ActiveCfg = Staging|Any CPU
 		{D2CA686C-28B0-9E41-6E82-867C0CA5E0F4}.Staging|Any CPU.Build.0 = Staging|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Debug-Linux|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Debug-Linux|Any CPU.Build.0 = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Production|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Production|Any CPU.Build.0 = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.shuiwu|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.shuiwu|Any CPU.Build.0 = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Staging|Any CPU.ActiveCfg = Debug|Any CPU
+		{5379533D-A68C-44DD-8200-969DE66373CC}.Staging|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -165,6 +181,7 @@ Global
 		{61C045FE-E42A-4092-8B08-6D39F74B35FA} = {0E041F3E-A9AD-49F3-A465-1F27B05006C0}
 		{21AD722B-253C-F175-C48A-1845D24447C1} = {0E041F3E-A9AD-49F3-A465-1F27B05006C0}
 		{D2CA686C-28B0-9E41-6E82-867C0CA5E0F4} = {0E041F3E-A9AD-49F3-A465-1F27B05006C0}
+		{5379533D-A68C-44DD-8200-969DE66373CC} = {0E041F3E-A9AD-49F3-A465-1F27B05006C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E2A9E88C-821B-40E9-ABEC-FB05A462AB71}

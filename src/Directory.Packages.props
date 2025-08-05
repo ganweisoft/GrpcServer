@@ -61,5 +61,10 @@
 		<PackageVersion Include="System.Data.SQLite" Version="1.0.119" />
 		<PackageVersion Include="System.IO.Ports" Version="9.0.5" />
 		<PackageVersion Include="System.Text.Encoding.CodePages" Version="9.0.5" />
+
+		<!-- Dapr -->
+		<PackageVersion Include="Dapr.AspNetCore" Version="1.15.0" />
+		<PackageVersion Include="Grpc.Net.Client" Version="2.71.0"/>
+		<PackageVersion Include="Google.Api.CommonProtos" Version="2.16.0"/>
 	</ItemGroup>
 </Project>
