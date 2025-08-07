@@ -1,4 +1,5 @@
-﻿using Dapr;
+//  Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+using Dapr;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;

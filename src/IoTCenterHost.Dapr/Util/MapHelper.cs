@@ -1,4 +1,5 @@
-﻿using GWDataCenter.Database;
+//  Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+using GWDataCenter.Database;
 using IoTCenterHost.Dapr.Models;
 
 namespace IoTCenterHost.Dapr.Util;

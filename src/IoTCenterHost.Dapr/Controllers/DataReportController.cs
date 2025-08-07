@@ -1,4 +1,5 @@
-﻿using Dapr;
+//  Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+using Dapr;
 using Dapr.Client;
 using GWDataCenter;
 using GWDataCenter.Database;

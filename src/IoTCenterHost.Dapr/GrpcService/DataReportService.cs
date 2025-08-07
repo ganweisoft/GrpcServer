@@ -1,4 +1,5 @@
-﻿using Dapr.AppCallback.Autogen.Grpc.v1;
+//  Copyright (c) 2020-2025 Beijing TOMs Software Technology Co., Ltd
+using Dapr.AppCallback.Autogen.Grpc.v1;
 using Dapr.Client;
 using Dapr.Client.Autogen.Grpc.v1;
 using Google.Protobuf.WellKnownTypes;
